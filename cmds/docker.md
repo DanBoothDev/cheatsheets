@@ -74,9 +74,14 @@ docker build -t myimage:1.0 .
 docker container run --name web -p 5000:80 myimage:1.0
 ```
 
-### Connect to headless container
+### Connect to running container
 ```bash
 docker exec -it $CONTAINER_NAME /bin/bash
+```
+
+### Attach to running container
+```bash
+docker container attach $CONTAINER_NAME
 ```
 
 ### See the last 100 logs
